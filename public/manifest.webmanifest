@@ -1,0 +1,43 @@
+{
+  "name": "TalkChat Messenger",
+  "short_name": "TalkChat",
+  "description": "Secure, lightning-fast real-time messaging with end-to-end encryption, WebRTC calling, and ephemeral stories.",
+  "start_url": "/",
+  "id": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#09090b",
+  "theme_color": "#2563eb",
+  "categories": ["social", "communication", "productivity"],
+  "icons": [
+    {
+      "src": "/icons/icon-192.svg",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/icon-512.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Chats",
+      "url": "/",
+      "description": "Open conversations"
+    },
+    {
+      "name": "Stories",
+      "url": "/stories",
+      "description": "View 24-hour stories"
+    },
+    {
+      "name": "Calls",
+      "url": "/calls",
+      "description": "View call history"
+    }
+  ]
+}
