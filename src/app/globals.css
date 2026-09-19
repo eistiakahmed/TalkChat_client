@@ -1,0 +1,153 @@
+@import "tailwindcss";
+
+/**
+ * TalkChat Design System - Sleek Modern Obsidian Dual-Theme Tokens.
+ * 
+ * Supports both Light Mode and Dark Mode with high contrast, crisp borders,
+ * Obsidian/Slate depth tiers, Signal Blue accents, and emerald presence markers.
+ * 
+ * @see https://tailwindcss.com/docs/v4-beta
+ */
+
+:root {
+  --bg-app: #f8fafc;
+  --bg-surface: #ffffff;
+  --bg-rail: #f1f5f9;
+  --bg-card: #ffffff;
+  --bg-card-hover: #f1f5f9;
+  --bg-muted: #f1f5f9;
+  --bg-chat-bubble-self: #2563eb;
+  --bg-chat-bubble-peer: #ffffff;
+
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --text-muted: #94a3b8;
+  --text-bubble-self: #ffffff;
+  --text-bubble-peer: #0f172a;
+
+  --border-subtle: #e2e8f0;
+  --border-strong: #cbd5e1;
+  --border-focus: #2563eb;
+
+  --accent-primary: #2563eb;
+  --accent-primary-hover: #1d4ed8;
+  --accent-primary-foreground: #ffffff;
+
+  --accent-success: #10b981;
+  --accent-warning: #f59e0b;
+  --accent-danger: #ef4444;
+
+  --shadow-subtle: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-card: 0 4px 6px -1px rgb(0 0 0 / 0.05), 0 2px 4px -2px rgb(0 0 0 / 0.05);
+  --shadow-modal: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.dark {
+  /* Luxury Black, White & Blue Hierarchy */
+  --bg-app: #090a0f;              /* Deep luxury black chat canvas */
+  --bg-surface: #0f1015;          /* Velvet black sidebar */
+  --bg-rail: #07070a;             /* Jet black navigation rail */
+  --bg-card: #15161c;             /* Elevated card & input surface */
+  --bg-card-hover: #1e1f26;       /* Card hover state */
+  --bg-muted: #1c1d24;            /* Muted surface */
+  --bg-chat-bubble-self: #007aff; /* Signature royal blue */
+  --bg-chat-bubble-peer: #181920; /* Deep card peer bubble */
+
+  --text-primary: #ffffff;        /* Crisp pure white */
+  --text-secondary: #cbd5e1;      /* Bright clean secondary */
+  --text-muted: #94a3b8;          /* Muted labels */
+  --text-bubble-self: #ffffff;    /* Pure white self text */
+  --text-bubble-peer: #ffffff;    /* Pure white peer text */
+
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-strong: rgba(255, 255, 255, 0.16);
+  --border-focus: #007aff;
+
+  --accent-primary: #007aff;
+  --accent-primary-hover: #0066d6;
+  --accent-primary-foreground: #ffffff;
+
+  --accent-success: #10b981;
+  --accent-warning: #f59e0b;
+  --accent-danger: #ef4444;
+
+  --shadow-subtle: 0 1px 2px 0 rgb(0 0 0 / 0.5);
+  --shadow-card: 0 4px 12px -2px rgb(0 0 0 / 0.6), 0 0 12px -2px rgba(0, 122, 255, 0.1);
+  --shadow-modal: 0 24px 38px 3px rgb(0 0 0 / 0.8), 0 0 25px rgba(0, 122, 255, 0.15);
+}
+
+@theme {
+  --color-background: var(--bg-app);
+  --color-foreground: var(--text-primary);
+  --color-muted-foreground: var(--text-secondary);
+
+  --color-border: var(--border-subtle);
+  --color-border-subtle: var(--border-subtle);
+  --color-border-strong: var(--border-strong);
+  --color-border-focus: var(--border-focus);
+
+  --color-card: var(--bg-card);
+  --color-card-hover: var(--bg-card-hover);
+  --color-surface: var(--bg-surface);
+  --color-rail: var(--bg-rail);
+  --color-muted: var(--bg-muted);
+
+  --color-bubble-self: var(--bg-chat-bubble-self);
+  --color-bubble-peer: var(--bg-chat-bubble-peer);
+
+  --color-txt-primary: var(--text-primary);
+  --color-txt-secondary: var(--text-secondary);
+  --color-txt-muted: var(--text-muted);
+  --color-txt-self: var(--text-bubble-self);
+  --color-txt-peer: var(--text-bubble-peer);
+
+  --color-accent: var(--accent-primary);
+  --color-accent-hover: var(--accent-primary-hover);
+  --color-accent-fg: var(--accent-primary-foreground);
+
+  --color-royal-blue: #007aff;
+
+  --color-brand-50: #eff6ff;
+  --color-brand-100: #dbeafe;
+  --color-brand-200: #bfdbfe;
+  --color-brand-300: #93c5fd;
+  --color-brand-400: #60a5fa;
+  --color-brand-500: #3b82f6;
+  --color-brand-600: #007aff;
+  --color-brand-700: #1d4ed8;
+  --color-brand-800: #1e40af;
+  --color-brand-900: #1e3a8a;
+  --color-brand-950: #172554;
+
+  --color-success: var(--accent-success);
+  --color-warning: var(--accent-warning);
+  --color-danger: var(--accent-danger);
+}
+
+/* Base Body Styles */
+body {
+  background-color: var(--bg-app);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--border-subtle);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--border-strong);
+}
